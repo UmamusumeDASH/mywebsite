@@ -1,0 +1,194 @@
+<html>
+
+<head>
+	<link rel ="icon" type="x-icon "href="img/Scc.png">
+	<title>Home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+	
+<style>
+/* HTML STUFF AND BODY */
+
+	html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+	body {
+	background-image: url('img/Sccfull.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+}
+
+/* Navigation and button */
+
+nav {
+  background-color: rgba(135, 206, 235, 0.95);
+  border-bottom: 1px groove blue;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateY(-80%); /* hides most of it */
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+  backdrop-filter: blur(8px);
+}
+
+nav:hover {
+  transform: translateY(0);
+  box-shadow: 0 4px 15px rgba(0,0,255,0.4);
+}
+
+.menu-toggle {
+  display: none;
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  background-color: #2980b9;
+  color: white;
+  font-size: 24px;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+
+ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+ul li {
+ margin: 0;
+}
+
+ul li a {
+      display: block;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      padding: 20px 30px;
+      text-decoration: none;
+      color: white;
+      transition: all 0.3s ease;
+      border-bottom: 3px solid transparent;
+    }
+
+ul li a:hover {
+      background-color: rgba(255, 165, 0, 0.8);
+      color: powderblue;
+      border-bottom: 3px solid powderblue;
+    }
+
+/* Viewing */
+
+@media (max-width: 768px) {
+
+  nav {
+    transform: translateY(-100%);
+  }
+
+  nav.active {
+    transform: translateY(0);
+  }
+
+  nav:hover {
+    transform: translateY(-100%);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+ ul {
+    flex-direction: column;
+  }
+
+
+ul li {
+    display: block;
+    margin: 10px auto;
+  }
+  
+  ul li a {
+   display: block;
+    width: 80%;
+    text-align: center;
+	padding: 10px 20px;
+  }
+}
+
+ul li a:hover {
+ background-color: powderblue;
+ color: blue;
+}
+
+
+
+/*padding*/
+
+div.padding {
+  border: 1px transparent;
+  padding-top: 1.5px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+}
+
+
+</style>
+
+<script>
+  // MENU TOGGLE
+  function toggleMenu() {
+    document.getElementById('navbar').classList.toggle('active');
+  }
+	  
+</script>
+
+<body>
+	 <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+  
+	<nav id="navbar">
+    <ul>
+      <li><a href="About.html"><span>About</span></a></li>
+    </ul>
+  </nav>
+	  
+    </div>
+	
+    <p align="center">
+      <marquee class="rainbow" width="100%" direction="right" scrollamount="45" style="font-size:35px; height: 40px;"> Website on development</marquee>
+    </p>
+
+
+<div class="padding" style="text-align: center;">
+   
+   <h1 style="font-family: Helvetica;"><p class="rainbow">Student Record Managing System</p></h1>
+   <h1 style="font-family:Comic Sans MS;" align="center">on development</h1>
+   
+</div>
+
+	<div style ="text-align: center;">
+  <p><b></p>
+  <span id="datetime"></span>
+  </div>
+  
+  
+</body>
+
+</html>
